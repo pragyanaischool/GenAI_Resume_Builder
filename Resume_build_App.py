@@ -30,9 +30,9 @@ def generate_resume(name: str, email: str, phone: str, skills: str, experience: 
     Format it properly for a professional resume.
     """
     
-    prompt: PromptTemplate(template=prompt_template, input_variables=["name", "email", "phone", "skills", "experience", "education"])
+    prompt_gen = PromptTemplate(template=prompt_template, input_variables=["name", "email", "phone", "skills", "experience", "education"])
     llm: Any = ChatGroq(model_name="llama-3.2-11b-vision-preview", temperature=0.7)  # Updated model
-    resume_chain: Any = LLMChain(llm=llm, prompt=prompt, verbose=True)
+    resume_chain: Any = LLMChain(llm=llm, prompt=prompt_gen, verbose=True)
     generated_resume: str = resume_chain.predict(name=name, email=email, phone=phone, skills=skills, experience=experience, education=education)
     return generated_resume
 
