@@ -54,8 +54,7 @@ def main() -> None:
     st.set_page_config(page_title="AI Resume Builder", page_icon="📄")
     
     with st.sidebar:
-        st.image("img/gkj.jpg")
-        st.write("---")
+        st.image("PragyanAI_Transperent_github.png")
         st.write("AI App created for educational purposes.")
     
     st.header("AI Resume Builder")
