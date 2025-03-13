@@ -1,0 +1,12 @@
+requests
+streamlit
+transformers
+torch
+langchain
+groq
+langchain-groq
+python-dotenv
+requests
+streamlit
+langchain_community
+fpdf
